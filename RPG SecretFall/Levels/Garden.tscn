@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Player/player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://icon.png" type="Texture" id=3]
+[ext_resource path="res://Levels/Garden.gd" type="Script" id=4]
+
+[node name="Garden" type="Node"]
+script = ExtResource( 4 )
+
+[node name="KinematicBody2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( 207.795, 140.868 )
+
+[node name="Camera2D" type="Camera2D" parent="KinematicBody2D"]
+position = Vector2( 0.0671844, 0.535416 )
+current = true
+
+[node name="icon" type="Sprite" parent="."]
+position = Vector2( 41.7135, 41.4281 )
+texture = ExtResource( 3 )
