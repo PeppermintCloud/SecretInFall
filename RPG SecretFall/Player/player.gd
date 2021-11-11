@@ -1,6 +1,8 @@
 extends KinematicBody2D
 
-export (int) var speed = 200
+export (int) var speed = 100 #character speed needs to be lower at certain locations such as the puzzle
+#at speed 100, reducing to 50 works
+#I could also change the switches to activate when the player is directly, by a single pixel basically, over it. To prevent overlap.
 export (int) var multiplier = 2
 export (bool) var run = false
 

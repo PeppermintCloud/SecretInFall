@@ -1,0 +1,260 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://World/Wall and switch puzzle sheet.png" type="Texture" id=1]
+[ext_resource path="res://World/puzzlePiece.gd" type="Script" id=2]
+[ext_resource path="res://World/TilePuzzle.gd" type="Script" id=3]
+
+[sub_resource type="AtlasTexture" id=1]
+atlas = ExtResource( 1 )
+region = Rect2( 16, 48, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=2]
+atlas = ExtResource( 1 )
+region = Rect2( 48, 48, 16, 16 )
+
+[sub_resource type="SpriteFrames" id=3]
+animations = [ {
+"frames": [ SubResource( 1 ), SubResource( 2 ) ],
+"loop": false,
+"name": "default",
+"speed": 1.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 8, 8 )
+
+[node name="Node2D" type="Node2D"]
+position = Vector2( 0, -8 )
+script = ExtResource( 3 )
+
+[node name="puzzlePiece" type="AnimatedSprite" parent="."]
+frames = SubResource( 3 )
+script = ExtResource( 2 )
+
+[node name="Area2D" type="Area2D" parent="puzzlePiece"]
+visible = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="puzzlePiece/Area2D"]
+visible = false
+shape = SubResource( 4 )
+
+[node name="puzzlePiece1" type="AnimatedSprite" parent="."]
+position = Vector2( 16, 0 )
+frames = SubResource( 3 )
+frame = 1
+script = ExtResource( 2 )
+
+[node name="Area2D" type="Area2D" parent="puzzlePiece1"]
+visible = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="puzzlePiece1/Area2D"]
+visible = false
+shape = SubResource( 4 )
+
+[node name="puzzlePiece2" type="AnimatedSprite" parent="."]
+position = Vector2( 32, 0 )
+frames = SubResource( 3 )
+script = ExtResource( 2 )
+
+[node name="Area2D" type="Area2D" parent="puzzlePiece2"]
+visible = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="puzzlePiece2/Area2D"]
+visible = false
+shape = SubResource( 4 )
+
+[node name="puzzlePiece3" type="AnimatedSprite" parent="."]
+position = Vector2( 48, 0 )
+frames = SubResource( 3 )
+frame = 1
+script = ExtResource( 2 )
+
+[node name="Area2D" type="Area2D" parent="puzzlePiece3"]
+visible = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="puzzlePiece3/Area2D"]
+visible = false
+shape = SubResource( 4 )
+
+[node name="puzzlePiece4" type="AnimatedSprite" parent="."]
+position = Vector2( 0, 16 )
+frames = SubResource( 3 )
+frame = 1
+script = ExtResource( 2 )
+
+[node name="Area2D" type="Area2D" parent="puzzlePiece4"]
+visible = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="puzzlePiece4/Area2D"]
+visible = false
+shape = SubResource( 4 )
+
+[node name="puzzlePiece5" type="AnimatedSprite" parent="."]
+position = Vector2( 16, 16 )
+frames = SubResource( 3 )
+script = ExtResource( 2 )
+
+[node name="Area2D" type="Area2D" parent="puzzlePiece5"]
+visible = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="puzzlePiece5/Area2D"]
+visible = false
+shape = SubResource( 4 )
+
+[node name="puzzlePiece6" type="AnimatedSprite" parent="."]
+position = Vector2( 32, 16 )
+frames = SubResource( 3 )
+frame = 1
+script = ExtResource( 2 )
+
+[node name="Area2D" type="Area2D" parent="puzzlePiece6"]
+visible = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="puzzlePiece6/Area2D"]
+visible = false
+shape = SubResource( 4 )
+
+[node name="puzzlePiece7" type="AnimatedSprite" parent="."]
+position = Vector2( 48, 16 )
+frames = SubResource( 3 )
+script = ExtResource( 2 )
+
+[node name="Area2D" type="Area2D" parent="puzzlePiece7"]
+visible = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="puzzlePiece7/Area2D"]
+visible = false
+shape = SubResource( 4 )
+
+[node name="puzzlePiece8" type="AnimatedSprite" parent="."]
+position = Vector2( 0, 32 )
+frames = SubResource( 3 )
+script = ExtResource( 2 )
+
+[node name="Area2D" type="Area2D" parent="puzzlePiece8"]
+visible = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="puzzlePiece8/Area2D"]
+visible = false
+shape = SubResource( 4 )
+
+[node name="puzzlePiece9" type="AnimatedSprite" parent="."]
+position = Vector2( 16, 32 )
+frames = SubResource( 3 )
+frame = 1
+script = ExtResource( 2 )
+
+[node name="Area2D" type="Area2D" parent="puzzlePiece9"]
+visible = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="puzzlePiece9/Area2D"]
+visible = false
+shape = SubResource( 4 )
+
+[node name="puzzlePiece10" type="AnimatedSprite" parent="."]
+position = Vector2( 32, 32 )
+frames = SubResource( 3 )
+script = ExtResource( 2 )
+
+[node name="Area2D" type="Area2D" parent="puzzlePiece10"]
+visible = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="puzzlePiece10/Area2D"]
+visible = false
+shape = SubResource( 4 )
+
+[node name="puzzlePiece11" type="AnimatedSprite" parent="."]
+position = Vector2( 48, 32 )
+frames = SubResource( 3 )
+frame = 1
+script = ExtResource( 2 )
+
+[node name="Area2D" type="Area2D" parent="puzzlePiece11"]
+visible = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="puzzlePiece11/Area2D"]
+visible = false
+shape = SubResource( 4 )
+
+[node name="puzzlePiece12" type="AnimatedSprite" parent="."]
+position = Vector2( 0, 48 )
+frames = SubResource( 3 )
+frame = 1
+script = ExtResource( 2 )
+
+[node name="Area2D" type="Area2D" parent="puzzlePiece12"]
+visible = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="puzzlePiece12/Area2D"]
+visible = false
+shape = SubResource( 4 )
+
+[node name="puzzlePiece13" type="AnimatedSprite" parent="."]
+position = Vector2( 16, 48 )
+frames = SubResource( 3 )
+script = ExtResource( 2 )
+
+[node name="Area2D" type="Area2D" parent="puzzlePiece13"]
+visible = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="puzzlePiece13/Area2D"]
+visible = false
+shape = SubResource( 4 )
+
+[node name="puzzlePiece14" type="AnimatedSprite" parent="."]
+position = Vector2( 32, 48 )
+frames = SubResource( 3 )
+frame = 1
+script = ExtResource( 2 )
+
+[node name="Area2D" type="Area2D" parent="puzzlePiece14"]
+visible = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="puzzlePiece14/Area2D"]
+visible = false
+shape = SubResource( 4 )
+
+[node name="puzzlePiece15" type="AnimatedSprite" parent="."]
+position = Vector2( 48, 48 )
+frames = SubResource( 3 )
+script = ExtResource( 2 )
+
+[node name="Area2D" type="Area2D" parent="puzzlePiece15"]
+visible = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="puzzlePiece15/Area2D"]
+visible = false
+shape = SubResource( 4 )
+
+[connection signal="frame_changed" from="puzzlePiece" to="." method="_on_puzzlePiece_frame_changed" binds= [ 0 ]]
+[connection signal="body_entered" from="puzzlePiece/Area2D" to="puzzlePiece" method="_on_Area2D_body_entered"]
+[connection signal="frame_changed" from="puzzlePiece1" to="." method="_on_puzzlePiece_frame_changed" binds= [ 1 ]]
+[connection signal="body_entered" from="puzzlePiece1/Area2D" to="puzzlePiece1" method="_on_Area2D_body_entered"]
+[connection signal="frame_changed" from="puzzlePiece2" to="." method="_on_puzzlePiece_frame_changed" binds= [ 2 ]]
+[connection signal="body_entered" from="puzzlePiece2/Area2D" to="puzzlePiece2" method="_on_Area2D_body_entered"]
+[connection signal="frame_changed" from="puzzlePiece3" to="." method="_on_puzzlePiece_frame_changed" binds= [ 3 ]]
+[connection signal="body_entered" from="puzzlePiece3/Area2D" to="puzzlePiece3" method="_on_Area2D_body_entered"]
+[connection signal="frame_changed" from="puzzlePiece4" to="." method="_on_puzzlePiece_frame_changed" binds= [ 4 ]]
+[connection signal="body_entered" from="puzzlePiece4/Area2D" to="puzzlePiece4" method="_on_Area2D_body_entered"]
+[connection signal="frame_changed" from="puzzlePiece5" to="." method="_on_puzzlePiece_frame_changed" binds= [ 5 ]]
+[connection signal="body_entered" from="puzzlePiece5/Area2D" to="puzzlePiece5" method="_on_Area2D_body_entered"]
+[connection signal="frame_changed" from="puzzlePiece6" to="." method="_on_puzzlePiece_frame_changed" binds= [ 6 ]]
+[connection signal="body_entered" from="puzzlePiece6/Area2D" to="puzzlePiece6" method="_on_Area2D_body_entered"]
+[connection signal="frame_changed" from="puzzlePiece7" to="." method="_on_puzzlePiece_frame_changed" binds= [ 7 ]]
+[connection signal="body_entered" from="puzzlePiece7/Area2D" to="puzzlePiece7" method="_on_Area2D_body_entered"]
+[connection signal="frame_changed" from="puzzlePiece8" to="." method="_on_puzzlePiece_frame_changed" binds= [ 8 ]]
+[connection signal="body_entered" from="puzzlePiece8/Area2D" to="puzzlePiece8" method="_on_Area2D_body_entered"]
+[connection signal="frame_changed" from="puzzlePiece9" to="." method="_on_puzzlePiece_frame_changed" binds= [ 9 ]]
+[connection signal="body_entered" from="puzzlePiece9/Area2D" to="puzzlePiece9" method="_on_Area2D_body_entered"]
+[connection signal="frame_changed" from="puzzlePiece10" to="." method="_on_puzzlePiece_frame_changed" binds= [ 10 ]]
+[connection signal="body_entered" from="puzzlePiece10/Area2D" to="puzzlePiece10" method="_on_Area2D_body_entered"]
+[connection signal="frame_changed" from="puzzlePiece11" to="." method="_on_puzzlePiece_frame_changed" binds= [ 11 ]]
+[connection signal="body_entered" from="puzzlePiece11/Area2D" to="puzzlePiece11" method="_on_Area2D_body_entered"]
+[connection signal="frame_changed" from="puzzlePiece12" to="." method="_on_puzzlePiece_frame_changed" binds= [ 12 ]]
+[connection signal="body_entered" from="puzzlePiece12/Area2D" to="puzzlePiece12" method="_on_Area2D_body_entered"]
+[connection signal="frame_changed" from="puzzlePiece13" to="." method="_on_puzzlePiece_frame_changed" binds= [ 13 ]]
+[connection signal="body_entered" from="puzzlePiece13/Area2D" to="puzzlePiece13" method="_on_Area2D_body_entered"]
+[connection signal="frame_changed" from="puzzlePiece14" to="." method="_on_puzzlePiece_frame_changed" binds= [ 14 ]]
+[connection signal="body_entered" from="puzzlePiece14/Area2D" to="puzzlePiece14" method="_on_Area2D_body_entered"]
+[connection signal="frame_changed" from="puzzlePiece15" to="." method="_on_puzzlePiece_frame_changed" binds= [ 15 ]]
+[connection signal="body_entered" from="puzzlePiece15/Area2D" to="puzzlePiece15" method="_on_Area2D_body_entered"]
